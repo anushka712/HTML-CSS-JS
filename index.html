@@ -15,6 +15,9 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
 
     <!-- Vimeo -->
      <script src="https://player.vimeo.com/api/player.js"></script>
@@ -29,29 +32,91 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+      .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 48;
+      }
+  </style>
 </head>
 <body>
    
 
     <!-- For mobile screen -->
-    <!-- <nav class="navbar-mob" id="navbar">
-        Logo section
-        <div class="logo">
-            <h1>Logo</h1>
-        </div>
-        
-        Hamburger menu
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>  -->
+    <nav class="navbar-mob" id="navbar">
+      <!-- Logo section -->
+      <div class="nav-logo">
+          <div style="display: flex; ">
+              <span 
+              style="padding-top: 18px; display: none; cursor: pointer; font-size: 32px; color:#0F234C;"
+              class="material-symbols-outlined back-arrow" class="backArrow-mob" id="backArrow-mob">
+                  arrow_back_ios
+                  </span> 
+          <div class="logo">
+              <h1>Logo</h1>
+          </div>
+      </div>
+          
+          <!-- Hamburger menu -->
+          <div class="hamburger" id="hamburger">
+              <span class="material-symbols-outlined menu-icon menu">menu</span>
+              <span class="material-symbols-outlined close-icon" style="display: none;">close</span>
+          </div>
+      </div>
+      
+      
+      <div class="nav-list-dis">
+          <ul class="nav-list-mob" id="navList-mob">
+              <li><a href="#mealtime" class="nav-item-mob">Mealtime 
+              </a> <span class="material-symbols-outlined menu-icon menu">arrow_forward</span></li>
+              <hr style="border: 0; 
+              height: 1px; 
+              background-color:#ECF3FF; 
+              ">
+
+              <li><a href="#about" class="nav-item-mob">Playtime</a><span class="material-symbols-outlined menu-icon menu">arrow_forward</span></li>
+              <hr style="border: 0; 
+              height: 1px; 
+              background-color:#ECF3FF; 
+              ">
+
+              <li><a href="#services" class="nav-item-mob">Bathtime</a><span class="material-symbols-outlined menu-icon menu">arrow_forward</span></li>
+              <hr style="border: 0; 
+              height: 1px; 
+              background-color:#ECF3FF; 
+              ">
+
+              <li><a href="#contact" class="nav-item-mob">The Play Boxes</a><span class="material-symbols-outlined menu-icon menu">arrow_forward</span></li>
+              <hr style="border: 0; 
+              height: 1px; 
+              background-color:#ECF3FF; 
+              ">
+
+              <li><a href="#contact" class="nav-item-mob">Gifts</a><span class="material-symbols-outlined menu-icon menu">arrow_forward</span></li>
+              <hr style="border: 0; 
+              height: 1px; 
+              background-color:#ECF3FF; 
+              ">
+
+              <li><a href="#contact" class="nav-item-mob">Best Sellers</a><span class="material-symbols-outlined menu-icon menu">arrow_forward</span></li>
+              <hr style="border: 0; 
+              height: 1px; 
+              background-color:#ECF3FF; 
+              ">
+
+              <li><a href="#contact" class="nav-item-mob">Shop all</a></li>
+          </ul>
+      </div>
+
+  </nav>
        
-
-
     <!-- For laptop screen -->
-     <div style="top: 0; position: sticky;  z-index: 1000;">
+      <div style="top: 0; position: sticky;  z-index: 1000;">
     
         <div class="announcement">
             <p class="text">This is a global announcement!</p>
@@ -123,7 +188,7 @@
 
         </ul>
       </nav>
-    </div>
+    </div> 
 
 
     <!-- Meal time -->
@@ -292,7 +357,7 @@
   
             <div class="img-content swiper-slide" style="background-color: white;">
               <div class="img-center">
-                <img src="/images/car.png" alt="" style="height:600px; width: 600px; margin-right:12px; border-radius: 15px; margin-top:8px;">
+                <img src="/images/car.png" alt="" style="height:700px; width: 600px; margin-right:12px; border-radius: 15px; margin-top:8px;">
               </div>
             </div>
   
@@ -312,37 +377,50 @@
                     allowfullscreen></iframe>
             </div>
             </div>
-  
+
+
           </div>
 
   
         </div>
       </div>
 
+    
       <div class="accordion">
         <div class="accordion-title">
         <P>It's not magic,</P>
         <p>It's science</p>
         </div>
         <div class="accordion-item">
-          <button class="accordion-header">Accordion 1</button>
+          <hr class="hr">
+
+          <p class="accordion-header">Lorem Ipsum</p>
           <div class="accordion-content">
-              <p>Content for Accordion 1</p>
+              <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis <br> at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
           </div>
       </div>
-      <div class="accordion-item">
-          <button class="accordion-header">Accordion 2</button>
-          <div class="accordion-content">
-              <p>Content for Accordion 2</p>
-          </div>
-      </div>
+      <hr class="hr">
 
       <div class="accordion-item">
-        <button class="accordion-header">Accordion 3</button>
+          <p class="accordion-header">Lorem Ipsum</p>
+          <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis <br> at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+          </div>
+      </div>
+      <hr class="hr">
+
+      <div class="accordion-item">
+        <p class="accordion-header">Lorem Ipsum</p>
         <div class="accordion-content">
-            <p>Content for Accordion 3</p>
+            <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis <br> at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
         </div>
     </div>
+    
+
+  <div class="acordion-footer">
+    <p class="acordion-footer-title">A friendly feminder</p>
+    <p class="acordion-footer-content">Alcohol will still probably affect your well-being and your sleep. A healthy breakfast and coffee <br> should have you up and running by mid-morning.</p>
+  </div>
 
       </div>
 

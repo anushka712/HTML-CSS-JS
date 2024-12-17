@@ -1,31 +1,4 @@
-/* Hamburger */
-.hamburger {
-    width: 22px;
-    height: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    color: #0F234C;
-}
 
-.hamburger div {
-    width: 100%;
-    height: 3px;
-    background-color: #0F234C;
-    border-radius: 1px;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 375px;
-    height: 58px;
-    background-color: #f8f8f8; /* Example background */
-    border: 2px solid black;
-}
 
 /* Logo */
 .logo {
@@ -392,6 +365,7 @@
 }
 
 
+/* Mealtime */
 #mealtime{
   width: 1442px;
   height: 450px;
@@ -402,6 +376,7 @@
   border: 2px solid black;
   background-color: white;
 }
+
 
 .meal-mini{
   width: 1283px;
@@ -506,48 +481,9 @@
   border-radius: 15px;
   padding-right: 54px;
   padding-left: 12px;
-  padding-top: 12px;
+  padding-top: 2px;
   padding-bottom: 12px;
   margin-right: 12px;
-}
-
-/* Accordion styles */
-.acordion{
-border:2px solid green;
-width: 545px;
-height: 750px;
-margin-top: 2px;
-}
-
-.accordion-item {
-  border: 1px solid #ddd;
-  margin-bottom: 5px;
-}
-.accordion-header {
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26.4px;
-  letter-spacing: -3%;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.accordion-content {
-  display: none;
-  padding: 10px;
-  background-color: #f1f1f1;
-  border-top: 1px solid #ddd;
-}
-.accordion-content.show {
-  display: block;
-}
-
-.accordion-header.active {
-  background-color: red;
-  font-weight: bold;
 }
 
 
@@ -579,11 +515,179 @@ margin-top: 2px;
   border-radius: 15px;
 }
 
+
+/* Accordion styles */
+.acordion{
+/* border:2px solid green; */
+width: 545px;
+height: 750px;
+
+}
+
+.accordion-header {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#CCCEB7;
+}
+.accordion-content {
+  display: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+.accordion-content.show {
+  display: block;
+}
+
+.accordion-header.active {
+  color:black;
+  font-weight: bold;
+}
+
+
 .accordion-title{
   color:#0F234C;
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 4000;
-  font-size: 64px;
+  font-weight: 400;
+  font-size: 44px;
   line-height: 4px;
   letter-spacing: -3%;
+}
+
+
+
+.acordion-footer-title{
+  color:#0F234C;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17.6px;
+  letter-spacing: -3%;
+}
+
+.acordion-footer-content{
+  color:#212121;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+
+}
+
+
+.hr{
+  border: 0; 
+  height: 2px; 
+  background-color: #CCCEB7; 
+  margin: 20px 0;
+}
+
+/* Initial styling for navbar */
+.navbar-mob {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 1rem;
+  width: 100vw;
+  border: 2px solid black;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 58px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+/* Style the hamburger */
+.hamburger {
+  cursor: pointer;
+}
+
+
+/* Initially hide the nav list on mobile */
+.nav-list-mob {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px solid black;
+}
+
+/* Style nav items */
+.nav-list-mob li {
+  padding-left: 4px;
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+  align-items: center; /* Vertically center the items */
+  justify-content: flex-start; /* Align text and icon to the left */
+}
+
+.nav-list-mob a {
+  text-decoration: none;
+  color:#0F234C;
+  font-family: 'Merriweather Sans';
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  width:355px;
+}
+
+
+
+/* Show nav list when hamburger is clicked */
+.nav-list-mob.active {
+  display: block;
+}
+
+/* Sticky behavior for active nav item */
+.nav-item-mob.active {
+  font-weight: bold;
+}
+
+
+.hamburger .menu-icon{
+  font-size:32px;
+  color:#0F234C;
+}
+
+.hamburger .close-icon{
+  font-size:32px;
+  color:#0F234C;
+}
+
+.forarrow{
+  font-size:32px;
+  color:#0F234C;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .announcement {
+    display: none;
+  }
+  .navbar-laptop {
+    display: none;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .navbar-mob {
+    display: none;
+  }
 }
