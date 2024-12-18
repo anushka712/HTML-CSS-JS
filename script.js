@@ -32,10 +32,10 @@ const slider = new Swiper('.swiper1', {
     },
   },
 
-  // autoplay: {
-  //   delay: 3000, // Slider changes every 5 seconds
-  //   disableOnInteraction: false, // Autoplay continues even after user interaction
-  // },
+  autoplay: {
+    delay: 4000, 
+    disableOnInteraction: false, 
+  },
  
 });
 
@@ -47,37 +47,33 @@ const accordionContents = document.querySelectorAll(".accordion-content");
 
 
 slider.on('slideChange', function () {
-  const activeIndex = slider.realIndex;  // Get the current active slide index
-  setActiveAccordion(activeIndex);  // Set corresponding accordion item active
+  const activeIndex = slider.realIndex;  
+  setActiveAccordion(activeIndex);  
 });
 
-// Set active accordion item
+
 accordionHeaders.forEach((header, index) => {
   header.addEventListener("click", () => {
-    // Toggle the active class on accordion headers
+
     accordionHeaders.forEach((item) => item.classList.remove("active"));
     header.classList.add("active");
     
-    // Show the corresponding accordion content
+ 
     accordionContents.forEach((content, contentIndex) => {
       content.classList.toggle("show", contentIndex === index);
     });
 
-    // Update Swiper to the corresponding slide when accordion is clicked
     slider.slideTo(index);
   });
 });
 
-// Function to set the active accordion based on the Swiper slide
 function setActiveAccordion(activeIndex) {
-  // Remove "active" class from all accordion headers
+ 
   accordionHeaders.forEach(header => header.classList.remove("active"));
   
-  // Add "active" class to the corresponding accordion header
   const activeHeader = accordionHeaders[activeIndex];
   activeHeader.classList.add("active");
 
-  // Show the corresponding accordion content
   accordionContents.forEach((content, index) => {
     content.classList.toggle("show", index === activeIndex);
   });
@@ -123,7 +119,7 @@ navItemsMob.forEach(item => {
         const target = document.querySelector(item.getAttribute('href'));
         if (target) {
             window.scrollTo({
-                top: target.offsetTop - 50, // 
+                top: target.offsetTop - 50, 
                 behavior: 'smooth',
             });
         }
@@ -145,3 +141,9 @@ backArrowMob.addEventListener('click', () => {
 });
 
 
+const cross = document.getElementById('cross');
+const announcement = document.getElementById('announcement');
+
+cross.addEventListener('click', () => {
+  announcement.style.display = 'none';
+});

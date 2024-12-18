@@ -1,4 +1,6 @@
-
+body{
+  box-sizing: border-box;
+}
 
 /* Logo */
 .logo {
@@ -16,11 +18,13 @@
     width: 1440px;
     height: 35px;
     background-color: #0F234C;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center; 
     position: relative; 
+    width: 100%;
+  box-sizing: border-box;
 }
 
 .announcement .text {
@@ -28,7 +32,7 @@
     height: 18px;
     margin-top: 8px;
     margin-left: 458.5px;
-    font-weight: 300; /* Removed px (font-weight should not include px) */
+    font-weight: 300;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.2px;
@@ -52,10 +56,12 @@
 .navbar-laptop{
     width: 1440px;
     height: 68px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     top: 0px;
     background-color: white; 
+    width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -144,7 +150,7 @@
   }
 
   .nav-item:hover .dropdown {
-    display: block; /* Shows dropdown on hover */
+    display: block; 
   }
 
 .dropdown ul {
@@ -167,35 +173,47 @@
     width: fit-content;
   }
 
-/* Contents */
 
 /* playboxes content */
 #play-boxes{
-  border:2px solid black; 
+  /* border:2px solid black;  */
   /* background-color: white; */
   height: 678px; 
   width: 1442px;
   margin-top: 33px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .min-play{
-  border:1px  rgb(209, 35, 35);
+  /* border:1px  rgb(209, 35, 35); */
   height:450px;
   width:1442px;
   background-color: white;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .play-content{
   /* border:2px solid black; */
-  width: 1244px;
+  width: 100%;
   height: 366px;
-  margin-left:157px;
+  margin-left:98px;
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  gap: 139px;
+  gap: 50px;
 }
+
+@media (max-width: 768px) {
+  .play-content {
+    width: 100%; 
+    margin-left: 10px; 
+    grid-template-columns: 1fr; 
+    margin-top: 228px;
+  }
+}
+
+
 
 .play-menu{
   width: 250px;
@@ -253,7 +271,7 @@
 .year-inner-icon{
   display: flex;
   gap: 28px;
-  flex-grow: 1; /* Makes the flex item expand to take full height in the parent */
+  flex-grow: 1; 
   justify-content: space-between; 
 }
 
@@ -367,14 +385,16 @@
 
 /* Mealtime */
 #mealtime{
-  width: 1442px;
+  /* width: 1442px; */
   height: 450px;
   display: flex;
   gap: 18px;
-  padding-left: 98px;
+  /* padding-left: 98px; */
   padding-top:35px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   background-color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -388,9 +408,19 @@
   width: 100%;
   height: 326px; 
   /* border: 2px solid red; */
+  padding-left: 98px;
   display: grid;
   grid-template-columns: 40% 60%; 
   gap: 10px; 
+}
+
+@media (max-width: 768px) {
+  .meal-mini-content{
+    width: 100%; 
+    padding-left: 10px; 
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
 }
 
 .meal-img{
@@ -460,51 +490,68 @@
 
 
 /* Slider With Acordion */
-.slider-acordion{
-  height: 750px;
-  width: 1344px;
+.slider-acordion {
+  height: auto; 
+  width: 100%;
   display: flex;
   gap: 25px;
-  border: 2px solid black;
   flex-direction: row;
-  padding-left: 12px;
-  padding-top:60px;
-  padding-left: 12px;
   background-color: white;
+  box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
-.slider{
+@media (max-width: 768px) {
+  .slider-acordion {
+    flex-direction: column;
+    gap: 20px; 
+    margin-top: 320px; 
+  }
+
+  .slider {
+    width: 100%; 
+    max-width: 100%;
+    height: auto; 
+    padding: 0; 
+    margin: 0 auto; 
+  }
+
+}
+
+
+.slider {
   height: 750px;
-  width:754px;
-  /* border: 2px solid red; */
-  overflow: auto; /* or keep it flexible based on your needs, without the need for `hidden` */
+  width: 754px;
+  overflow: hidden; 
   border-radius: 15px;
-  padding-right: 54px;
-  padding-left: 12px;
-  padding-top: 2px;
-  padding-bottom: 12px;
-  margin-right: 12px;
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
 }
 
-
-/* Video Styling */
 .video-container {
   width: 600px;
   height: 500px;
-  overflow: hidden; /* Ensures no overflow */
-  display: flex; /* Centers the video if it's smaller */
-  justify-content: center;
-  align-items: center;
+  overflow: hidden; 
+  display: flex; 
   margin-left:140px;
   margin-top: -58px;
   border-radius: 15px;
   /* border: 2px solid black; */
 }
 
+@media (max-width: 768px) {
+  .video-container {
+    margin-left: 0; 
+  }
+}
+
 .video-container video  {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video fills the container without distortion */
+  object-fit: cover;
 }
 
 .video-container iframe  {
@@ -518,10 +565,14 @@
 
 /* Accordion styles */
 .acordion{
-/* border:2px solid green; */
 width: 545px;
 height: 750px;
+}
 
+@media (max-width: 768px) {
+  .accordion {
+    margin-top: -200px;
+  }
 }
 
 .accordion-header {
@@ -562,8 +613,6 @@ height: 750px;
   letter-spacing: -3%;
 }
 
-
-
 .acordion-footer-title{
   color:#0F234C;
   font-family: 'Roboto Condensed', sans-serif;
@@ -590,50 +639,50 @@ height: 750px;
   margin: 20px 0;
 }
 
-/* Initial styling for navbar */
+
 .navbar-mob {
   display: flex;
   flex-direction: column;
   align-items: self-start;
   padding: 1rem;
-  width: 100vw;
-  border: 2px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
 }
 
 .nav-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 58px;
   padding-left: 4px;
   padding-right: 4px;
+  top:0;
+  position: sticky;
+  z-index: 1000;
 }
 
-
-/* Style the hamburger */
 .hamburger {
   cursor: pointer;
 }
 
-
-/* Initially hide the nav list on mobile */
 .nav-list-mob {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 /* Style nav items */
 .nav-list-mob li {
   padding-left: 4px;
-  width: 100%;
+  width: inherit;
   display: flex;
   padding-top: 10px;
-  align-items: center; /* Vertically center the items */
-  justify-content: flex-start; /* Align text and icon to the left */
+  align-items: center; 
+  justify-content: flex-start;
 }
 
 .nav-list-mob a {
@@ -644,17 +693,13 @@ height: 750px;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.1px;
-  width:355px;
+  width:455px;
 }
 
-
-
-/* Show nav list when hamburger is clicked */
 .nav-list-mob.active {
   display: block;
 }
 
-/* Sticky behavior for active nav item */
 .nav-item-mob.active {
   font-weight: bold;
 }
@@ -670,11 +715,6 @@ height: 750px;
   color:#0F234C;
 }
 
-.forarrow{
-  font-size:32px;
-  color:#0F234C;
-  margin-left: auto;
-}
 
 @media (max-width: 768px) {
   .announcement {
@@ -689,5 +729,11 @@ height: 750px;
 @media (min-width: 768px) {
   .navbar-mob {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-content.swiper-slide .image img {
+    margin-left: 5px !important; 
   }
 }
